@@ -17,8 +17,8 @@ float Solution2::GetBalance(const std::string& accountName)
 	}
 
 	std::string operation;
-	int amount;
-	int balance = 0.0f; 
+	float amount; 
+	float balance = 0.0f;
 
 	while (file >> operation >> amount)
 	{

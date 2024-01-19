@@ -16,7 +16,7 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
 		case TemperatureUnits::FAHRENHEIT: // Si on cherche à convertir le Celsius en Fahrenheit on doit multiplier la valeur d'origine par 9 puis la divier par 5, et ajouter 32
 			return (_value * 9 / 5) + 32;
 		case TemperatureUnits::KELVIN: // Si on cherche a convertir le Celsius en Kelvin il faut ajouter 273 à la valeur d'origine
-			return _value + 273;
+			return _value + 273.15;
 		}
 		break;
 
@@ -28,7 +28,7 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
 		case TemperatureUnits::FAHRENHEIT:
 			return _value;
 		case TemperatureUnits::KELVIN:
-			return (_value - 32) * 5 / 9 + 273;
+			return (_value - 32) * 5 / 9 + 273.15; 
 		}
 		break;
 
@@ -36,7 +36,7 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
 		switch (_to)
 		{
 		case TemperatureUnits::CELSIUS:
-			return _value - 273;
+			return _value - 273.15;
 		case TemperatureUnits::FAHRENHEIT:
 			return (_value - 273) * 9 / 5 + 32;
 		case TemperatureUnits::KELVIN:

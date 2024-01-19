@@ -2,7 +2,6 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-
 #include <ostream>
 
 // Don't forget to enable the exercise in the SudentConfiguration.h file !
@@ -11,7 +10,7 @@
 
 float Solution2::GetBalance(const std::string& accountName)
 {
-	std::ifstream file("BankAccount/" + accountName + "txt"); 
+	std::ifstream file("BankAccount/" + accountName + ".txt");
 
 	if (!file.is_open()) {
 		throw std::logic_error("Compte non trouvé :(");
@@ -19,7 +18,7 @@ float Solution2::GetBalance(const std::string& accountName)
 
 	std::string operation;
 	int amount;
-	int balance;
+	int balance = 0.0f; 
 
 	while (file >> operation >> amount)
 	{

@@ -38,7 +38,7 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
 		case TemperatureUnits::CELSIUS:
 			return _value - 273.15;
 		case TemperatureUnits::FAHRENHEIT:
-			return (_value - 273) * 9 / 5 + 32;
+			return (_value - 273.15) * 9 / 5 + 32;
 		case TemperatureUnits::KELVIN:
 			return _value;
 		}
